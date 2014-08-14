@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: calander_development
+
+test:
+  adapter: postgresql
+  database: calander_test
