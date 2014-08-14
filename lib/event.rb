@@ -6,7 +6,8 @@ class Event < ActiveRecord::Base
   def self.upcomming_events
     now = Time.new
     upcomming = []
-    self.all.each do |event|
+    ordered_list = self.order(:start_date)
+    ordered_list.all.each do |event|
       if event.start_date > now
         upcomming << event
       end
